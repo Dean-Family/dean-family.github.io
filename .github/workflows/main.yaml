@@ -8,9 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install Pandoc
-      run: sudo apt-get install pandoc texlive-latex-base
-    - name: Convert Markdown to PDF
-      run: pandoc -o documentation.pdf documentation.md
+      run: sudo apt-get install pandoc
     - name: Convert Markdown to HTML
       run: pandoc -o documentation.html documentation.md
     - name: Deploy to GitHub Pages

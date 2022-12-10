@@ -10,9 +10,11 @@
 
 ### Core Competencies
 
-- Environments: Windows and Linux systems, bare metal, virtualized and containerized. ▪ Cloud: AWS, GCP, Azure, DigitalOcean, BlueHost, Heroku
+- Environments: Windows and Linux systems, bare metal, virtualized and containerized. 
+- Cloud: AWS, GCP, Azure, DigitalOcean, BlueHost, Heroku
 - Languages: PowerShell, bash, Python, Groovy, SQL, PHP, Javascript/EMCAScript.
-- Automation: CDK, Cloudformation, Jenkins, Docker, Kubernetes, SVN, Ansible, Chef ▪ Messaging: ActiveMQ, RabbitMQ, SQS,AnypointMQ
+- Automation: CDK, Cloudformation, Jenkins, Docker, Kubernetes, SVN, Ansible, Chef 
+- Messaging: ActiveMQ, RabbitMQ, SQS,AnypointMQ
 - Web Frameworks: Django, Express, Flask, ASP.net, Tomcat
 - Databases: Postgresql, MySQL, MSSQL, DynamoDB, SQLite
 

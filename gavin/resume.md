@@ -1,4 +1,3 @@
-# Gavin Dean
 ## Engineer
 
 - Accomplished IT leader with over 10 years of experience delivering business value through technological solutions.

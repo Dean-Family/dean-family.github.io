@@ -1,0 +1,41 @@
+# Site settings
+title: New Tab
+description: A place to put things we want to share or save.
+url: "https://dean-family.github.io" # your domain or GitHub Pages URL
+baseurl: "" # the subpath of your site, e.g. /blog/
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-minimal # choose a theme you like, or create your own
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate-v2
+
+# Pagination settings
+paginate: 10 # number of posts per page
+paginate_path: "/page:num/"
+
+# Social media and contact information
+author:
+  name: Gavin Dean
+  email: gavin@deanfam.net
+  twitter_username: yourtwitterusername
+  github_username: gavindean90
+  website: deanfam.net
+
+# Exclude files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - Rakefile
+
+# GitHub Pages settings
+remote_theme: jekyll/minima # specify a remote theme, or remove this line if using a local theme
+github:
+  is_project_page: false # set to true if your site is a project page
+  pages:
+    permalink: /:title/

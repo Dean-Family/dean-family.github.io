@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Gavin Dean - Resume
 ---
 

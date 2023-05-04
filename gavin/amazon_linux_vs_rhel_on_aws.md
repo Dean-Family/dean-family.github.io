@@ -1,4 +1,9 @@
-# RHEL vs. Amazon Linux: The Great Showdown for Your AWS Workloads
+---
+layout: post
+title: "RHEL vs. Amazon Linux: The Great Showdown for Your AWS Workloads"
+date: 2023-05-04
+categories: [AWS, Linux, Cloud Computing]
+---
 
 ## Introduction
 

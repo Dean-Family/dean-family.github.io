@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Gavin Dean - Engineer
+title: Gavin Dean - Resume
 ---
 
 ## Engineer

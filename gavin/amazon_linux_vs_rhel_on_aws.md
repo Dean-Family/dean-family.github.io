@@ -5,7 +5,7 @@ date: 2023-05-04
 categories: [AWS, Linux, Cloud Computing]
 ---
 
-<img src="images/IMG_0713.png" alt="Chess Match">
+<img src="dean-family.github.io/images/IMG_0713.png" alt="Chess Match">
 
 
 ## Introduction

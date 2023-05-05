@@ -5,6 +5,9 @@ date: 2023-05-04
 categories: [AWS, Linux, Cloud Computing]
 ---
 
+<img src="images/IMG_0713.png" alt="Chess Match">
+
+
 ## Introduction
 
 Hey, fellow IT enthusiasts! If you're anything like me, you've probably pondered the age-old question (okay, maybe not that old): "Which Linux distribution should I choose for my AWS workloads?" Well, fear not! In this blog post, we're going to dive deep into the epic battle between Red Hat Enterprise Linux (RHEL) and Amazon Linux. So, grab your popcorn and let's find out which contender comes out on top!

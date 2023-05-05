@@ -9,7 +9,6 @@ markdown: kramdown
 theme: jekyll-theme-minimal # choose a theme you like, or create your own
 plugins:
   - jekyll-sitemap
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate-v2
 
@@ -20,8 +19,6 @@ paginate_path: "/page:num/"
 # Social media and contact information
 author:
   name: Gavin Dean
-  email: gavin@deanfam.net
-  twitter_username: yourtwitterusername
   github_username: gavindean90
   website: deanfam.net
 

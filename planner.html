@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Agenda Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <button onclick="generatePDF()">Generate PDF</button>
+
+    <script>
+        function generatePDF() {
+            const doc = new jsPDF();
+
+            doc.setFontSize(18);
+            doc.text("Meeting Agenda", 20, 20);
+
+            doc.setFontSize(14);
+            doc.text("1. Introduction", 20, 40);
+            doc.text("2. Topic One", 20, 60);
+            doc.text("3. Topic Two", 20, 80);
+            doc.text("4. Topic Three", 20, 100);
+            doc.text("5. Closing Remarks", 20, 120);
+
+            doc.save("Meeting_Agenda.pdf");
+        }
+    </script>
+</body>
+</html>

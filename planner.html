@@ -7,21 +7,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-    <button onclick="generatePDF()">Generate PDF</button>
+    <h1>Meeting Agenda Generator</h1>
+    <form id="agenda-form">
+        <label for="agenda-item-1">Agenda Item 1:</label>
+        <input type="text" id="agenda-item-1" name="agenda-item-1" required><br><br>
+        <label for="agenda-item-2">Agenda Item 2:</label>
+        <input type="text" id="agenda-item-2" name="agenda-item-2" required><br><br>
+        <label for="agenda-item-3">Agenda Item 3:</label>
+        <input type="text" id="agenda-item-3" name="agenda-item-3" required><br><br>
+        <button type="button" onclick="generatePDF()">Generate PDF</button>
+    </form>
 
     <script>
         function generatePDF() {
+            const form = document.getElementById("agenda-form");
+            const agendaItems = [
+                form.elements["agenda-item-1"].value,
+                form.elements["agenda-item-2"].value,
+                form.elements["agenda-item-3"].value,
+            ];
+
             const doc = new jsPDF();
 
             doc.setFontSize(18);
             doc.text("Meeting Agenda", 20, 20);
 
             doc.setFontSize(14);
-            doc.text("1. Introduction", 20, 40);
-            doc.text("2. Topic One", 20, 60);
-            doc.text("3. Topic Two", 20, 80);
-            doc.text("4. Topic Three", 20, 100);
-            doc.text("5. Closing Remarks", 20, 120);
+            for (let i = 0; i < agendaItems.length; i++) {
+                doc.text(`${i + 1}. ${agendaItems[i]}`, 20, 40 + i * 20);
+            }
 
             doc.save("Meeting_Agenda.pdf");
         }

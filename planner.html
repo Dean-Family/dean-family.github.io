@@ -5,41 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meeting Agenda Generator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </head>
 <body>
-    <h1>Meeting Agenda Generator</h1>
-    <form id="agenda-form">
-        <label for="agenda-item-1">Agenda Item 1:</label>
-        <input type="text" id="agenda-item-1" name="agenda-item-1" required><br><br>
-        <label for="agenda-item-2">Agenda Item 2:</label>
-        <input type="text" id="agenda-item-2" name="agenda-item-2" required><br><br>
-        <label for="agenda-item-3">Agenda Item 3:</label>
-        <input type="text" id="agenda-item-3" name="agenda-item-3" required><br><br>
-        <button type="button" onclick="generatePDF()">Generate PDF</button>
-    </form>
-
     <script>
-        function generatePDF() {
-            const form = document.getElementById("agenda-form");
-            const agendaItems = [
-                form.elements["agenda-item-1"].value,
-                form.elements["agenda-item-2"].value,
-                form.elements["agenda-item-3"].value,
-            ];
+        document.addEventListener("DOMContentLoaded", () => {
+          const generateAgendaButton = document.createElement("button");
+          generateAgendaButton.textContent = "Generate Meeting Agenda";
+          generateAgendaButton.addEventListener("click", generateMeetingAgenda);
+          document.body.appendChild(generateAgendaButton);
+        });
 
-            const doc = new jsPDF();
+        function generateMeetingAgenda() {
+          const meetingTitle = prompt("Enter the meeting title:");
+          const numTopics = parseInt(prompt("Enter the number of topics:"));
 
-            doc.setFontSize(18);
-            doc.text("Meeting Agenda", 20, 20);
+          const topics = [];
+          for (let i = 0; i < numTopics; i++) {
+            const topic = prompt(`Enter topic ${i + 1}:`);
+            const duration = prompt(`Enter duration for topic ${i + 1} (in minutes):`);
+            topics.push({ title: topic, duration });
+          }
 
-            doc.setFontSize(14);
-            for (let i = 0; i < agendaItems.length; i++) {
-                doc.text(`${i + 1}. ${agendaItems[i]}`, 20, 40 + i * 20);
-            }
+          const doc = new jspdf.jsPDF();
 
-            const pdfBlob = doc.output("blob");
-            saveAs(pdfBlob, "Meeting_Agenda.pdf");
+          doc.setFontSize(18);
+          doc.text(meetingTitle, 20, 30);
+
+          doc.setFontSize(14);
+          let yPos = 50;
+          topics.forEach((topic, index) => {
+            doc.text(`${index + 1}. ${topic.title} (${topic.duration} minutes)`, 20, yPos);
+            yPos += 20;
+          });
+
+          doc.save("meeting_agenda.pdf");
         }
     </script>
 </body>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meeting Agenda Generator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </head>
 <body>
     <h1>Meeting Agenda Generator</h1>
@@ -37,7 +38,8 @@
                 doc.text(`${i + 1}. ${agendaItems[i]}`, 20, 40 + i * 20);
             }
 
-            doc.save("Meeting_Agenda.pdf");
+            const pdfBlob = doc.output("blob");
+            saveAs(pdfBlob, "Meeting_Agenda.pdf");
         }
     </script>
 </body>

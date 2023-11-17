@@ -11,6 +11,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate-v2
+  - jekyll-remote-themes
 
 # Pagination settings
 paginate: 10 # number of posts per page
@@ -32,6 +33,7 @@ exclude:
 
 # GitHub Pages settings
 github:
+  remote_theme: Dean-Family/hacker-theme
   is_project_page: false # set to true if your site is a project page
   pages:
     permalink: /:title/

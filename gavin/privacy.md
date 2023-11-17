@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Wikipedia Wandering Wally, Privacy Policy and More"
-date: 2023-05-04
-categories: [AWS, Linux, Cloud Computing]
+date: 2023-11-16
+categories: [GPT, OpenAi, Wikipedia]
 ---
 # Wikipedia Wandering Wally 
 

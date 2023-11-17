@@ -31,7 +31,6 @@ exclude:
   - Rakefile
 
 # GitHub Pages settings
-remote_theme: jekyll/minima # specify a remote theme, or remove this line if using a local theme
 github:
   is_project_page: false # set to true if your site is a project page
   pages:

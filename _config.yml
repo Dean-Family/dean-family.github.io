@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 
 # Build settings
 markdown: kramdown
-theme: minimal-mistakes-jekyll # choose a theme you like, or create your own
+theme: jekyll-theme-hacker # choose a theme you like, or create your own
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
